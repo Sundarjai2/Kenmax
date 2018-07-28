@@ -1,0 +1,245 @@
+<div id="menu2" class="tab-pane fade in active">
+    <form id="third_form" #mother="ngForm" novalidate (ngSubmit)="onSubmit(mother.value)">
+      <h3 id="tab_head">Mother's Particular</h3> 
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control p-input" id="MP_Name" name="MP_Name" ngModel  >
+            <p id="error_MP_Name" class="error_msg"></p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Aadhar/ Driving/ Passport No</label>
+            <input type="text" class="form-control p-input" id="MP_identity" name="MP_identity" ngModel >
+            <p id="error_MP_identity" class="error_msg"></p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">DOB</label>
+            <input type="date" class="form-control p-input" id="MP_DOB" name="MP_DOB" ngModel  >
+            <p id="error_MP_DOB" class="error_msg"></p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Marital Status</label>
+            <div class="row">
+              
+              <div class="col-lg-4 col-md-4">                      
+                <div class="form-radio">
+                  <label>
+                  <input  value="single" type="radio" id="MP_Marital_status" name="MP_Marital_status" ngModel >
+                  Single
+                  </label>
+                </div>
+              </div>
+                
+              <div class="col-lg-4 col-md-4">  
+                <div class="form-radio">
+                  <label>
+                  <input  value="Married" type="radio" id="MP_Marital_status" name="MP_Marital_status"  checked="checked" ngModel>
+                  Married
+                  </label>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 col-md-4"> 
+                <div class="form-radio">
+                  <label>
+                  <input  value="separated" type="radio" id="MP_Marital_status" name="MP_Marital_status" ngModel >
+                  Separated
+                  </label>
+                </div>
+              </div> 
+            </div>  
+              
+            <div class="row">            
+              <div class="col-lg-4 col-md-4"> 
+                <div class="form-radio">
+                  <label>
+                  <input  value="divorced" type="radio" id="MP_Marital_status" name="MP_Marital_status" ngModel  >
+                  Divorced
+                  </label>
+                </div>
+              </div>
+               
+              <div class="col-lg-4 col-md-4">
+                <div class="form-radio">
+                  <label>
+                  <input  value="widowed" type="radio" id="MP_Marital_status" name="MP_Marital_status" ngModel >
+                  Widowed
+                  </label>
+                </div>  
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+          
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Country of Birth</label>
+            <input type="text" class="form-control p-input" id="MP_Country_of_Birth" name="MP_Country_of_Birth" ngModel  >
+            <p id="error_MP_Country_of_Birth" class="error_msg"></p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Citizenship</label>
+            <input type="text" class="form-control p-input" id="MP_Citizenship" name="MP_Citizenship" ngModel  >
+            <p id="error_MP_Citizenship" class="error_msg"></p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        
+        <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Religion</label>
+                <input type="text" class="form-control p-input" id="MP_Religion" name="MP_Religion"  ngModel >
+                <p id="error_MP_Religion" class="error_msg"></p>
+              </div>
+        </div>
+            
+        <div class="col-lg-6 col-md-6">
+  
+              <div class="form-group">
+                <label for="exampleInputEmail1">Highest Academic Qualification</label>
+                  <div class="row">
+                    <div class ="col-lg-6 col-md-6">
+                      <div class="form-radio">
+                        <label>
+                        <input  value="No_Formal_Education" type="radio" id="MP_Highest_Academic_Qualification" name="MP_Highest_Academic_Qualification" ngModel >
+                        NO_Formal_Education
+                        </label>
+                      </div>
+                    </div>
+            
+                    <div class ="col-lg-6 col-md-6">
+                      <div class="form-radio">
+                        <label>
+                        <input  value="Primary" type="radio" id="MP_Highest_Academic_Qualification" name="MP_Highest_Academic_Qualification" ngModel >
+                        Primary
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class ="col-lg-6 col-md-6">
+                      <div class="form-radio">
+                        <label>
+                        <input  value="Secondry" type="radio" id="MP_Highest_Academic_Qualification" name="MP_Highest_Academic_Qualification" checked="checked" ngModel >
+                        Secondry( Diploma, ITE ect.., )
+                        </label>
+                      </div>
+                    </div>
+                  
+                    <div class ="col-lg-6 col-md-6">
+                      <div class="form-radio">
+                        <label>
+                        <input  value="Postsecondary" type="radio" id="MP_Highest_Academic_Qualification" name="MP_Highest_Academic_Qualification" ngModel  >
+                        Postsecondary
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div  class="row">
+                    <div class="col-md-6 col-lg-6"></div>
+                      <div class="form-radio">
+                        <label>
+                        <input  value="Graduate/ Postgraduate" type="radio" id="MP_Highest_Academic_Qualification" name="MP_Highest_Academic_Qualification" ngModel >
+                        Graduate/ Postgraduate
+                        </label>
+                    </div>
+                  </div>
+              </div> 
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Gross Monthly Income</label>
+            <input type="text" class="form-control p-input" id="MP_Gross_Monthly" name="MP_Gross_Monthly" ngModel>
+            <p id="error_MP_Gross_Monthly" class="error_msg"></p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Occupation</label>
+            <input type="text" class="form-control p-input" id="MP_Occupation" name="MP_Occupation" ngModel  >
+            <p id="error_MP_Occupation" class="error_msg"></p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-6 col-lg-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Spoken Language(s)</label>
+            <input type="text" class="form-control p-input" id="MP_Spoken_Language" name="MP_Spoken_Language"  ngModel >
+            <p id="error_MP_Spoken_Language" class="error_msg"></p>
+          </div>
+        </div>
+      
+        <div class="col-lg-6 col-lg-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Contact no.   (Home)</label>
+            <input type="text" class="form-control p-input" id="MP_Contact_home"  name="MP_Contact_home" autocomplete="off" ngModel >
+            <p id="error_MP_Contact_home" class="error_msg"></p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Contact no.   (Mobile)</label>
+            <input type="text" class="form-control p-input" id="MP_Contact_mobile"  name="MP_Contact_mobile" autocomplete="off" ngModel >
+            <p id="error_MP_Contact_mobile" class="error_msg"></p>
+          </div>
+        </div>
+          
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="text" class="form-control p-input" id="MP_Email"  name="MP_Email" autocomplete="off"  ngModel>
+            <p id="error_MP_Email" class="error_msg"></p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Residential Address(if different from child's residential address)</label>
+            <input type="text" class="form-control p-input" id="MP_Residential_Address"  name="MP_Residential_Address" autocomplete="off" ngModel >
+            <p id="error_MP_Residential_Address" class="error_msg"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+              <div class="col-lg-6 col-md-6">
+                
+              </div>
+              <div class="col-lg-6 col-md-6">
+                
+                  <input type="submit" [disabled]="!mother.form.valid"value="Save" class="main_btn" id="submit_3">
+      
+              </div>
+      </div>
+    </form>
+  </div>  

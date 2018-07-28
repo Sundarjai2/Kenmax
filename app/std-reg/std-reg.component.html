@@ -1,0 +1,216 @@
+<div id="home" class="tab-pane fade in active">
+  <form id="first_form" #StdRegForm="ngForm" (ngSubmit)="onSubmit(StdRegForm.value)" novalidate>
+      <h3 id="tab_head">Student Registation</h3> 
+      <h4 id = "show_id"></h4>
+      <h4 id="success_msg"></h4> 
+     
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+           <div class="form-group">
+             <label for="exampleInputEmail1">Name</label>
+             <input type="text" required #name="ngModel" class="form-control " id="Name"  name="Name" ngModel>
+             <div *ngIf="name.errors && (name.dirty||name.touched)" class="alert alert-danger">
+                <div [hidden]="!name.errors.required">
+                 name is required
+                </div>
+              </div>
+        
+           </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <div class="form-group">
+                <label for="exampleInputEmail1">DOB</label>
+                <input type="date"  required #date="ngModel" class="form-control p-input" id="DOB" name="DOB" ngModel>
+                <div *ngIf="date.errors && (date.dirty||date.touched)" class="alert alert-danger">
+                    <div [hidden]="!date.errors.required">
+                     D.O.B is required
+                    </div>
+                  </div>
+               
+             </div>
+        </div>
+      </div>
+      
+      <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="form-radio">
+                <label>
+                 <input  value="male" type="radio"  name="Gender"  checked="checked"  ngModel>
+                  Male
+                </label>
+              </div>
+                <div class="form-radio">
+                <label>
+                  <input  value="female" type="radio"  name="Gender"  ngModel>
+                  Female
+                </label>
+              </div>
+              <p id="error_gender" class="error_msg"></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group">
+              <label>Country of Birth</label>
+              <input type="text" required #country="ngModel" class="form-control p-input" id="Country_of_Birth" name="Country_of_Birth"  ngModel>
+              <div *ngIf="country.errors && (country.dirty||country.touched)" class="alert alert-danger">
+                  <div [hidden]="!country.errors.required">
+                   Country of Birth is required
+                  </div>
+                </div>
+            </div>
+            
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Citizenship</label>
+            <input type="text" required #citizen="ngModel" class="form-control p-input" id="Citizenship" name="Citizenship"  ngModel>
+            <div *ngIf="citizen.errors && (citizen.dirty||citizen.touched)" class="alert alert-danger">
+                <div [hidden]="!citizen.errors.required">
+                    Citizenship  is required
+                </div>
+              </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Religion</label>
+            <input type="text" #religion="ngModel" required class="form-control p-input" id="Religion" name="Religion"  ngModel>
+            <div *ngIf="religion.errors && (religion.dirty||religion.touched)" class="alert alert-danger">
+                <div [hidden]="!religion.errors.required">
+                    Religion  is required
+                </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Home Language(s)</label>
+            <input type="text" #homeLag="ngModel" required class="form-control p-input" id="Home_Language" name="Home_Language"  ngModel  >
+            <div *ngIf="homeLag.errors && (homeLag.dirty||homeLag.touched)" class="alert alert-danger">
+                <div [hidden]="!homeLag.errors.required">
+                    Home Language(s)  is required
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            <input type="text" #add="ngModel"required class="form-control p-input" id="Address"  name="Address" autocomplete="off"  ngModel >
+            <div *ngIf="add.errors && (add.dirty||add.touched)" class="alert alert-danger">
+                <div [hidden]="!add.errors.required">
+                   Address  is required
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">AadhaarCard Number</label>
+            <input type="text" #aathar="ngModel" required class="form-control p-input" id="AadhaarCard_Number"  name="AadhaarCard_Number"  pattern="[0-9]{12}" autocomplete="off"  ngModel >
+            <div *ngIf="aathar.errors && (aathar.dirty||aathar.touched)" class="alert alert-danger">
+                <div [hidden]="!aathar.errors.required">
+                    AadhaarCard Number is required
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Phone Number</label>
+            <input type="text" #phone="ngModel" minlength="10" maxlength="10" required class="form-control p-input" id="Phone_Number"  name="Phone_Number" autocomplete="off" pattern="[1-9]{1}[0-9]{9}"  ngModel >
+            <div *ngIf="phone.errors && (phone.dirty||phone.touched)" class="alert alert-danger">
+                <div [hidden]="!phone.errors.required">
+                    Phone Number  is required
+                </div>
+                <div [hidden]="!phone.errors.minlength">
+                    Phone Number  is incorrect
+                </div>
+                <div [hidden]="!phone.errors.maxlength">
+                    Phone Number  is incorrect
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Is the child living with his/her Parents ?</label>
+                <div class="form-radio Child_Living">
+                  <label>
+                    <input  value="YES" type="radio" id="cl_yes" name="Child_Living"  ngModel>
+                    YES
+                  </label>  
+                </div>
+                <div class="form-radio Child_Living">
+                  <label>
+                    <input  value="NO" type="radio" id="cl_no" name="Child_Living"  ngModel>
+                    NO
+                  </label>
+                </div>
+                <p id="error_Child_Living" class="error_msg"></p>
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group" id="alter_liv1">
+            <label for="exampleInputEmail1">Main Caregiver</label>
+            <input type="text" class="form-control p-input" id="Main_Caregiver" name="Main_Caregiver"  ngModel  >
+            <p id="error_Main_Caregiver" class="error_msg"></p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group" id="alter_liv2">
+            <label for="exampleInputEmail1">Phone Number</label>
+            <input type="text" class="form-control p-input" id="Mobile_No" name="Mobile_No"  ngModel  >
+            <p id="error_Mobile_No" class="error_msg"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group" id="alter_liv3">
+            <label for="exampleInputEmail1">Address of Caregiver</label>
+            <input type="text" class="form-control p-input" id="Address_of_Caregiver" name="Address_of_Caregiver"  ngModel  >
+            <p id="error_Address_of_Caregiver" class="error_msg"></p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="form-group" id="alter_liv4">
+            <label for="exampleInputEmail1">Relationship to child</label>
+            <input type="text" class="form-control p-input" id="Relationship_to_child" name="Relationship_to_child"  ngModel   >
+            <p id="error_Relationship_to_child" class="error_msg"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+              <div class="col-lg-6 col-md-6">
+                
+              </div>
+              <div class="col-lg-6 col-md-6">
+                
+                  <input type="submit" [disabled]="!StdRegForm.form.valid" value="Save" class="main_btn" id="submit_1">
+      
+              </div>
+      </div> 
+        </form>
+ </div>

@@ -1,0 +1,107 @@
+<div class="tab-content">
+  <form #childedu="ngForm" (ngSubmit)="onSubmit(childedu.value)" novalidate>
+      
+  <div id="home" class="tab-pane fade in active">
+      <h3 id="tab_head">Child Education Background</h3> 
+      <!--<h4 id="success_msg_1" class="success_msg"></h4>-->
+      <div id="snackbar" class="snack"></div>
+      <table class="table">
+          <thead>
+              <tr class="">
+              <th></th>
+              <th></th>
+              <th>Year attended</th>
+              <th></th>
+              </tr>
+          </thead>
+          <thead>
+            <tr class="tb_label">
+              <th>#</th>
+              <th>Name of school/center/Kindergarten</th>
+              <th>From</th>
+              <th>To</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Child_Care_Centre / Nursery</td>
+              <td><input type="date" #dateRef="ngModel" required class="form-control p-input" id="CEB_Child_Care_Centre_From" name="CEB_Child_Care_Centre_From" ngModel> <div *ngIf="dateRef.errors && (dateRef.dirty||dateRef.touched)" class="alert alert-danger"  >
+                  <div [hidden]="!dateRef.errors.required">
+                    date is required
+                  </div>
+                </div></td>
+             
+              <td><input type="date"  #dateR="ngModel" required class="form-control p-input" id="CEB_Child_Care_Centre_To" name="CEB_Child_Care_Centre_To" ngModel><div *ngIf="dateR.errors && (dateR.dirty||dateR.touched)" class="alert alert-danger"  >
+                  <div [hidden]="!dateR.errors.required">
+                    date is required
+                  </div>
+                </div></td>
+              
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Kindergarten</td>
+              <td><input type="date" #date1="ngModel" class="form-control p-input"  id="CEB_Kindergarten_From" name="CEB_Kindergarten_From" ngModel required>
+                <div *ngIf="date1.errors && (date1.dirty||date1.touched)" class="alert alert-danger"  >
+                  <div [hidden]="!date1.errors.required">
+                    date is required
+                  </div>
+                </div></td>
+              <td><input type="date" #date2="ngModel" required class="form-control p-input"  id="CEB_Kindergarten_To" name="CEB_Kindergarten_To" ngModel>
+                <div *ngIf="date2.errors && (date2.dirty||date2.touched)" class="alert alert-danger"  >
+                  <div [hidden]="!date2.errors.required">
+                    date is required
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Primary_School</td>
+              <td><input type="date" #date3="ngModel" required class="form-control p-input"   id="CEB_Primary_School_From" name="CEB_Primary_School_From" ngModel>
+                <div *ngIf="date3.errors && (date3.dirty||date3.touched)" class="alert alert-danger"  >
+                  <div [hidden]="!date3.errors.required">
+                    date is required
+                  </div>
+                </div></td>
+              <td><input type="date" #date4="ngModel" class="form-control p-input"   id="CEB_Primary_School_To" name="CEB_Primary_School_To" ngModel>
+                <div *ngIf="date4.errors && (date4.dirty||dateR.touched)" class="alert alert-danger"  >
+                    <div [hidden]="!date4.errors.required">
+                      date is required
+                    </div>
+                  </div></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Secondary_School</td>
+              <td><input type="date" class="form-control p-input"  id="CEB_Secondary_School_From" name="CEB_Secondary_School_From" ngModel></td>
+              <td><input type="date" class="form-control p-input"  id="CEB_Secondary_School_To" name="CEB_Secondary_School_To" ngModel></td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Special_Education_School</td>
+              <td><input type="date" class="form-control p-input" id="CEB_Special_Education_School_From" name="CEB_Special_Education_School_From" ngModel ></td>
+              <td><input type="date" class="form-control p-input" id="CEB_Special_Education_School_To" name="CEB_Special_Education_School_To" ngModel></td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Others(e.g home-schooling, home-based therapy)</td>
+              <td><input type="date" class="form-control p-input" id="CEB_Others_From" name="CEB_Others_From" ngModel></td>
+              <td><input type="date" class="form-control p-input" id="CEB_Others_To" name="CEB_Others_To" ngModel></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row">
+              <div class="col-lg-6 col-md-6">
+                
+              </div>
+              <div class="col-lg-6 col-md-6">
+                
+                  <input type="submit"  [disabled]="!childedu.form.valid"value="Save" class="main_btn" id="submit_1">
+      
+              </div>
+      </div> 
+     </div>
+    </form>
+</div>
+   

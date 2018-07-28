@@ -1,0 +1,106 @@
+<form #medical="ngForm" (ngSubmit)="onSubmit(medical.value)" novalidate>
+<div id="menu1" class="tab-pane fade in Active">
+  <h3 id="tab_head">Medical and Allied Health Professional Involvement</h3> 
+  <div id="snackbar1" class="snack"></div>
+  <table class="table">
+      <thead>
+        <tr class="tb_label">
+          <th>#</th>
+          <th>Professional</th>
+          <th>Name</th>
+          <th>Organisation</th>
+          <th>Frequency_of_involvement</th>
+          <th>Start date</th>
+          <th>End date</th>
+        </tr>
+      </thead>
+           <thead>
+        <tr class="">
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th><font size='1'>Please state per week/ month/ year</font></th>
+          <th></th>
+          <th>End date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Psychologist</td>
+          <td><input type="text" class="form-control p-input" id="MAH_Psychologist_Name" name="MAH_Psychologist_Name" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Psychologist_Organisation" name="MAH_Psychologist_Organisation" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Psychologist_Frequency_Of_Involvement" name="MAH_Psychologist_Frequency_Of_Involvement" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Psychologist_Start_date" name="MAH_Psychologist_Start_date" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Psychologist_End_date" name="MAH_Psychologist_End_date" ngModel></td>
+        </tr>
+       <tr>
+          <th scope="row">2</th>
+          <td>Medical doctor</td>
+          <td><input type="text" class="form-control p-input" id="MAH_Medical_doctor_Name" name="MAH_Medical doctor_Name" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Medical_doctor_Organisation" name="MAH_Medical doctor_Organisation" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Medical_doctor_Frequency_Of_Involvement" name="MAH_Medical doctor_Frequency_Of_Involvement" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Medical_doctor_Start_date" name="MAH_Medical doctor_Start_date" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Medical_doctor_End_date" name="MAH_Medical doctor_End_date" ngModel></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Psychiatrist</td>
+          <td><input type="text" class="form-control p-input" id="MAH_Psychiatrist_Name" name="MAH_Psychiatrist_Name" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Psychiatrist_Organisation" name="MAH_Psychiatrist_Organisation" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Psychiatrist_Frequency_Of_Involvement" name="MAH_Psychiatrist_Frequency_Of_Involvement" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Psychiatrist_Start_date" name="MAH_Psychiatrist_Start_date" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Psychiatrist_End_date" name="MAH_Psychiatrist_End_date" ngModel></td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Speech and Language therapist</td>
+          <td><input type="text" class="form-control p-input" id="MAH_Speech_and_Language_therapist_Name" name="MAH_Speech and Language therapist_Name" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Speech_and_Language_therapist_Organisation" name="MAH_Speech and Language therapist_Organisation" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Speech_and_Language_therapist_Frequency_Of_Involvement" name="MAH_Speech and Language therapist_Frequency_Of_Involvement" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Speech_and_Language_therapist_Start_date" name="MAH_Speech and Language therapist_Start_date" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Speech_and_Language_therapist_End_date" name="MAH_Speech and Language therapist_End_date" ngModel></td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Occupational therapist</td>
+          <td><input type="text" class="form-control p-input" id="MAH_Occupational_therapist_Name" name="MAH_Occupational therapist_Name" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Occupational_therapist_Organisation" name="MAH_Occupational therapist_Organisation" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Occupational_therapist_Frequency_Of_Involvement" name="MAH_Occupational therapist_Frequency_Of_Involvement" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Occupational_therapist_Start_date" name="MAH_Occupational therapist_Start_date" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Occupational_therapist_End_date" name="MAH_Occupational therapist_End_date" ngModel></td>
+        </tr>
+         <tr>
+          <th scope="row">6</th>
+          <td>Physiotherapist</td>
+          <td><input type="text" class="form-control p-input" id="MAH_Physiotherapist_Name" name="MAH_Physiotherapist_Name" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Physiotherapist_Organisation" name="MAH_Physiotherapist_Organisation" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Physiotherapist_Frequency_Of_Involvement" name="MAH_Physiotherapist_Frequency_Of_Involvement" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Physiotherapist_Start_date" name="MAH_Physiotherapist_Start_date" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Physiotherapist_End_date" name="MAH_Physiotherapist_End_date" ngModel></td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Others (Please specify)</td>
+          <td><input type="text" class="form-control p-input" id="MAH_Others_Name" name="MAH_Others_Name"></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Others_Organisation" name="MAH_Others_Organisation" ngModel></td>
+          <td><input type="text" class="form-control p-input" id="MAH_Others_Frequency_Of_Involvement" name="MAH_Others_Frequency_Of_Involvement" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Others_Start_date" name="MAH_Others_Start_date" ngModel></td>
+          <td><input type="date" class="form-control p-input" id="MAH_Others_End_date" name="MAH_Others_End_date" ngModel></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+          <div class="col-lg-6 col-md-6">
+            
+          </div>
+          <div class="col-lg-6 col-md-6">
+            
+              <input type="submit" value="Save" class="main_btn" id="submit_2">
+  
+          </div>
+  </div> 
+    </div>
+
+</form>
